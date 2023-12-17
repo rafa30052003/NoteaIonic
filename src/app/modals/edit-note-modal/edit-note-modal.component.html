@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Nota</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Editar Nota</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <!-- Aquí puedes mostrar los campos del formulario para editar la nota -->
+      <ion-item>
+        <ion-label position="floating">Título</ion-label>
+        <ion-input [(ngModel)]="note.title"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-textarea [(ngModel)]="note.description"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-button slot="end" (click)="takePic()">
+          <ion-icon slot="icon-only" src="assets/icons/image.svg"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button slot="start" (click)="openMapModal()">
+          <ion-icon slot="icon-only" src="assets/icons/compass.svg"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+       
+      
+      <!-- Otros campos del formulario -->
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="cancel()">Cancelar</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="saveNote()">Guardar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
